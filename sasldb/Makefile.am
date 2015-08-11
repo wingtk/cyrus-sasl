@@ -57,6 +57,7 @@ libsasldb_la_SOURCES = allockey.c sasldb.h
 EXTRA_libsasldb_la_SOURCES = $(extra_common_sources)
 libsasldb_la_DEPENDENCIES = $(SASL_DB_BACKEND)
 libsasldb_la_LIBADD = $(SASL_DB_BACKEND) 
+libsasldb_la_LDFLAGS = -no-undefined
 
 # Prevent make dist stupidity
 libsasldb_a_SOURCES =
