@@ -63,7 +63,7 @@
 #include <saslutil.h>
 #include <saslplug.h>
 
-#ifdef WIN32
+#if defined(WIN32) || defined(__CYGWIN__)
 #define PLUG_API __declspec(dllexport)
 #else
 #define PLUG_API extern
