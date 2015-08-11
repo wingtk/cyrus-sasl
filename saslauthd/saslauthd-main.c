@@ -139,7 +139,11 @@ int		num_procs = 5;		/* The max number of worker processes*/
 /****************************************
  * module globals
 *****************************************/
+#if defined(__MSYS__) || defined(__CYGWIN__)
+extern char __declspec(dllimport)	*optarg;		/* For getopt()                          */
+#else
 extern char 	*optarg;		/* For getopt()                          */
+#endif
 static int     	master_pid;		/* Pid of the master process             */
 static int 	pid_fd;                 /* Descriptor to the open pid file       */
 static int 	pid_file_lock_fd; 		/* Descriptor to the open pid lock file  */

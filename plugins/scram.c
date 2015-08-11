@@ -789,7 +789,7 @@ scram_server_mech_step1(server_context_t *text,
 			       /* Different SCRAM hashes can have different strengh */
 			       SCRAM_SASL_MECH,
 			       "scram_iteration_counter",
-			       &s_iteration_count,
+			       (const char **) &s_iteration_count,
 			       NULL);
 
 	if (s_iteration_count != NULL) {
@@ -1572,7 +1572,7 @@ static int scram_setpass(void *glob_context __attribute__((unused)),
 			       /* Different SCRAM hashes can have different strengh */
 			       SCRAM_SASL_MECH,
 			       "scram_iteration_counter",
-			       &s_iteration_count,
+			       (const char **) &s_iteration_count,
 			       NULL);
 
 	if (s_iteration_count != NULL) {
@@ -1989,7 +1989,7 @@ scram_client_mech_step1(client_context_t *text,
 
     if (userid != NULL && *userid != '\0') {
 	result = encode_saslname (oparams->user,
-				  &encoded_authorization_id,
+				  (const char **) &encoded_authorization_id,
 				  &freeme2);
 
 	if (result != SASL_OK) {
@@ -2000,7 +2000,7 @@ scram_client_mech_step1(client_context_t *text,
     }
 
     result = encode_saslname (oparams->authid,
-			      &encoded_authcid,
+			      (const char **) &encoded_authcid,
 			      &freeme);
     if (result != SASL_OK) {
 	MEMERROR( params->utils );

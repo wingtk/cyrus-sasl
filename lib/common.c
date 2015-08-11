@@ -1046,10 +1046,10 @@ int sasl_getprop(sasl_conn_t *conn, int propnum, const void **pvalue)
   case SASL_GSS_CREDS:
       if(conn->type == SASL_CONN_CLIENT)
 	  *(void **)pvalue = 
-              ((sasl_client_conn_t *)conn)->cparams->gss_creds;
+              (void *)((sasl_client_conn_t *)conn)->cparams->gss_creds;
       else
 	  *(void **)pvalue = 
-              ((sasl_server_conn_t *)conn)->sparams->gss_creds;
+              (void *)((sasl_server_conn_t *)conn)->sparams->gss_creds;
       break;
   case SASL_HTTP_REQUEST: {
       if (conn->type == SASL_CONN_SERVER)
