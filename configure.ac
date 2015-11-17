@@ -60,7 +60,7 @@ dnl
 dnl REMINDER: When changing the version number here, please also update
 dnl the values in win32/include/config.h and include/sasl.h as well.
 dnl
-AM_INIT_AUTOMAKE(cyrus-sasl, 2.1.26)
+AM_INIT_AUTOMAKE(cyrus-sasl, 2.1.27)
 CMU_INIT_AUTOMAKE
 
 # and include our config dir scripts
