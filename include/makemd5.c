@@ -108,7 +108,7 @@ my_strupr(char *s)
     while(x){ x <<= 1; b++; if(x < zero) pre=""; }		\
     if(b >= len){						\
         int tabs;						\
-	sprintf(tmp, "%sINT%d" , pre, len/8);			\
+	sprintf(tmp, "MD5_%sINT%d" , pre, len/8);			\
 	sprintf(tmp2, "typedef %s %s;", #TYPE, tmp);		\
 	my_strupr(tmp);						\
 	tabs = 5 - strlen(tmp2) / 8;				\
