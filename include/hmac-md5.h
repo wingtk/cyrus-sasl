@@ -15,8 +15,8 @@ typedef struct HMAC_MD5_CTX_s {
  *  values stored in network byte order (Big Endian)
  */
 typedef struct HMAC_MD5_STATE_s {
-    UINT4 istate[4];
-    UINT4 ostate[4];
+    MD5_UINT4 istate[4];
+    MD5_UINT4 ostate[4];
 } HMAC_MD5_STATE;
 
 #ifdef __cplusplus
