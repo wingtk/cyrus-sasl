@@ -51,7 +51,6 @@ extra_common_sources = db_none.c db_lmdb.c db_ndbm.c db_gdbm.c db_berkeley.c
 EXTRA_DIST = NTMakefile
 
 noinst_LTLIBRARIES = libsasldb.la
-noinst_LIBRARIES = libsasldb.a
 
 libsasldb_la_SOURCES = allockey.c sasldb.h
 EXTRA_libsasldb_la_SOURCES = $(extra_common_sources)
@@ -62,8 +61,3 @@ libsasldb_la_LDFLAGS = -no-undefined
 # Prevent make dist stupidity
 libsasldb_a_SOURCES =
 EXTRA_libsasldb_a_SOURCES =
-
-libsasldb.a: libsasldb.la $(SASL_DB_BACKEND_STATIC)
-	$(AR) cru .libs/$@ $(SASL_DB_BACKEND_STATIC)
-
-
