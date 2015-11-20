@@ -1301,8 +1301,6 @@ AC_EGREP_HEADER(sockaddr_storage, sys/socket.h, [
 
 AC_SUBST(DIRS)
 
-AC_CONFIG_SUBDIRS(saslauthd)
-
 AH_TOP([
 /* acconfig.h - autoheader configuration input */
 /* 
