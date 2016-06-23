@@ -49,7 +49,7 @@ dnl REMINDER: When changing the version number here, please also update
 dnl the values in win32/include/config.h and include/sasl.h as well.
 dnl
 AC_INIT([cyrus-sasl],
-        [2.1.26],
+        [2.1.28],
         [https://git.cyrus.foundation/maniphest/],
         [cyrus-sasl],
         [https://docs.cyrus.foundation])
